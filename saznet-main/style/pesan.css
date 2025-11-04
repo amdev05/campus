@@ -1,0 +1,91 @@
+@import "./style.css";
+
+:root {
+  --secondary: #1f3d74;
+  --hlcolor: #c1ff72;
+  --textcolor: #f5f5f7;
+  --bgcolor: #284f92;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+
+main {
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 500px;
+  margin-top: 4rem;
+  padding: 4rem;
+  background-color: var(--secondary);
+}
+select {
+  color: var(--bgcolor);
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+#bayar {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--bgcolor);
+  background-color: var(--hlcolor);
+}
+
+.qris {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#qris > div {
+  padding: 4rem 10rem;
+  background-color: var(--bgcolor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.qris_image {
+  text-align: center;
+  font-size: 12px;
+}
+.qris_image img {
+  width: 250px;
+  margin-bottom: 0.5rem;
+}
+#qris div button {
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  color: var(--bgcolor);
+  background-color: var(--hlcolor);
+}
+
+.pesanan_aktif {
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.muncul {
+  display: flex;
+}
+.hilang {
+  display: none;
+}

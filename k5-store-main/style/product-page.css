@@ -1,0 +1,171 @@
+@import url(./global.css);
+@import url(./headfoot.css);
+
+.product-container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12rem 2rem 0 2rem;
+  border-radius: 8px;
+}
+
+.product-image {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  border-radius: 2px;
+}
+
+.product-details {
+  flex: 2;
+  padding: 0 20px;
+}
+
+.product-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 35px;
+  color: #1d1d1d;
+  margin-bottom: 10px;
+}
+
+.original-price {
+  font-size: 24px;
+  text-decoration: line-through;
+  color: orange;
+  margin-left: 10px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1d1d1d;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.color label,
+.quantity label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.color-option {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.color-option.black {
+  background-color: black;
+}
+
+.color-option.white {
+  background-color: white;
+  border: 1px solid #000;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.action-buttons {
+  display: flex;
+  width: 80pxpx;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.add-to-cart,
+.buy-now {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart {
+  background-color: #f0f0f0;
+  color: #1d1d1d;
+  font: bold;
+}
+
+.add-to-cart:hover {
+  background-color: #ddd;
+}
+
+.buy-now {
+  background-color: #000;
+  color: #fff;
+}
+
+.buy-now:hover {
+  background-color: #333;
+}
+
+.color label {
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.color input[type="radio"] {
+  display: none;
+}
+
+.color span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.color-1 {
+  background-color: black;
+}
+
+.color-2 {
+  background-color: white;
+  border: 1px solid black;
+}

@@ -1,0 +1,199 @@
+@import "./style.css";
+
+:root {
+  --secondary: #1f3d74;
+  --hlcolor: #c1ff72;
+  --textcolor: #f5f5f7;
+  --bgcolor: #284f92;
+}
+
+#hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../image/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  color: var(--hlcolor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+#hero h1 {
+  color: var(--hlcolor);
+  font-size: 80px;
+  margin-top: 4rem;
+}
+#hero a {
+  color: var(--secondary);
+  background-color: var(--hlcolor);
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+}
+
+#statistik {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8rem;
+}
+.stat-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stat-text > p {
+  margin-top: 1rem;
+}
+.stat-text ul {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.stat-text h4 {
+  color: var(--hlcolor);
+  font-size: 2rem;
+}
+.stat-text button {
+  width: fit-content;
+  background-color: var(--hlcolor);
+  color: var(--secondary);
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+}
+.stat-img {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.stat-img img {
+  width: 90%;
+}
+
+#spesifikasi {
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spek {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+.spek > div {
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spek > div > ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#informasi {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 8rem;
+}
+#informasi > div {
+  width: 100%;
+}
+.informasi-map iframe {
+  width: 100%;
+  height: 400px;
+}
+.informasi-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.informasi-text h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.informasi-text > ul {
+  margin-top: 3rem;
+}
+.informasi-text > ul > li {
+  margin-top: 0.5rem;
+}
+.informasi-text ul li img {
+  width: 18px;
+}
+.informasi-text span {
+  margin-left: 0.5rem;
+}
+
+#testimoni {
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimoni {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.testimoni > div {
+  background-color: var(--bgcolor);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testi-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.testi-info span {
+  color: #c6c6c6;
+}
+
+@media (min-width: 600px) {
+  #hero h1 {
+    font-size: 100px;
+  }
+  #statistik {
+    flex-direction: row;
+  }
+  .stat-text,
+  .stat-img {
+    width: 50%;
+  }
+
+  .spek {
+    flex-direction: row;
+  }
+  .spek > div {
+    width: 50%;
+    padding: 4rem;
+  }
+  #informasi {
+    flex-direction: row;
+  }
+  #informasi > div {
+    width: 50%;
+  }
+  .testimoni {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

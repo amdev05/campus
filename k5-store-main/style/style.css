@@ -1,0 +1,238 @@
+/* global css */
+@import url("./global.css");
+@import url("./headfoot.css");
+
+/* STYLE */
+
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-title {
+  color: var(--background-color);
+  text-align: center;
+}
+.banner-title h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+.banner-title h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.banner-title h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.banner-title a {
+  font-size: small;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+}
+/* BANNER END */
+
+/* SERVICES */
+.services {
+  margin-top: 2rem;
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.service-card {
+  display: inline-flex;
+  gap: 1rem;
+  font-size: small;
+}
+.services img {
+  width: 40px;
+}
+/* SERVICES END */
+
+/* RECOMENDATION */
+.recomendation {
+  display: grid;
+  grid-template-areas: "p1" "p2" "p3" "p4" "p5";
+  width: 100%;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.item-1 {
+  position: relative;
+  grid-area: p1;
+}
+.item-1 .item-title {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 2rem;
+}
+.item-2 {
+  position: relative;
+  grid-area: p2;
+}
+
+.item-2 .item-title {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+.item-3 {
+  position: relative;
+  grid-area: p3;
+}
+.item-3 .item-title {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.4rem;
+}
+.item-4 {
+  position: relative;
+  grid-area: p4;
+}
+.item-4 .item-title {
+  position: absolute;
+  width: 100%;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.4rem;
+}
+.item-5 {
+  position: relative;
+  grid-area: p5;
+}
+.item-5 .item-title {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+.item-title {
+  color: var(--background-color);
+}
+.item-title p {
+  font-weight: 300;
+}
+.recomendation > div {
+  height: auto;
+}
+.recomendation img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* RERCOMENDATION END */
+
+/* HOT PRODUCT */
+.hot-products {
+  margin-top: 5rem;
+}
+.hot-products h2 {
+  position: relative;
+}
+.hot-products h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  height: 3px;
+  width: 64px;
+  background-color: var(--secondary-color);
+}
+.hot-products-list {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.product-card img {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+}
+.product-card-title {
+  margin: 1rem 0;
+}
+.product-card-title p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+.product-card-title p strong {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.product-card-title p span {
+  font-size: smaller;
+  color: var(--secondary-color);
+  text-decoration: line-through;
+}
+/* HOT PRODUCT END*/
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 728px) {
+  .services {
+    justify-content: center;
+  }
+  .recomendation {
+    grid-template-areas:
+      "p1 p1"
+      "p2 p3"
+      "p4 p5";
+  }
+  .recomendation > div {
+    height: 300px;
+  }
+  .recomendation .item-1 {
+    height: 500px;
+  }
+  .hot-products-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    height: 90vh;
+  }
+  .services {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .recomendation {
+    grid-template-areas:
+      "p1 p1 p1 p1 p2 p2 p2 p2 p2 p3 p3 p3"
+      "p1 p1 p1 p1 p4 p4 p4 p5 p5 p5 p5 p5";
+  }
+  .recomendation > div {
+    height: 100%;
+  }
+  .recomendation .item-1 {
+    height: 100%;
+  }
+  .hot-products-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

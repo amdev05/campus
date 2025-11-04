@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --secondary: #1f3d74;
+  --hlcolor: #c1ff72;
+  --textcolor: #f5f5f7;
+  --bgcolor: #284f92;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  color: var(--textcolor);
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* background-color: var(--bgcolor); */
+  background-image: url(../image/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h2 {
+  color: var(--hlcolor);
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+header {
+  background-color: var(--secondary);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+nav {
+  margin: auto;
+  padding: 0.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1 a {
+  color: var(--hlcolor);
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+.menu {
+  position: relative;
+  transition: all 0.5s ease;
+}
+.menu:hover {
+  color: var(--hlcolor);
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: var(--hlcolor);
+  bottom: -18px;
+  transition: all 0.3s ease;
+}
+.menu:hover::after {
+  width: 100%;
+}
+.login {
+  background-color: #c1ff72;
+  color: var(--secondary);
+  padding: 0.25rem 1.25rem;
+  transition: all 0.3s ease;
+}
+.login:hover {
+  background-color: #8cf206;
+}
+
+footer {
+  width: 100%;
+  margin-top: 10rem;
+  background-color: var(--secondary);
+  padding: 2rem 0;
+  text-align: center;
+}

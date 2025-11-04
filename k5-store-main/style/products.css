@@ -1,0 +1,78 @@
+@import url("./global.css");
+@import url("./headfoot.css");
+
+/* Style */
+/* .container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+} */
+.product-list {
+  padding-top: 10rem;
+}
+.product-list h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.product-list h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ff6600;
+  margin-top: 5px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.product-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.product-item h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.product-item p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.product-item .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff6600;
+}
+.product-item .old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+.select-group {
+  display: flex;
+  gap: 10px;
+}
+.select-group select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.select-group select:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}

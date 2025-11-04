@@ -1,0 +1,80 @@
+/* STYLE GLOBAL */
+@import url(./global.css);
+@import url(./headfoot.css);
+
+/* STYLE FAQ */
+.faq {
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
+.faq h1 {
+  margin: 1.5rem 0 1rem 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* Make a line under the teks */
+.line {
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  animation: lines 0.5s linear;
+}
+
+table {
+  width: auto;
+  margin: 30px 0;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border: solid var(--primary-color) 2px;
+  padding: 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  align-items: normal;
+  overflow: auto;
+}
+
+/* Styling th properti */
+th {
+  padding: 15px;
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+col:nth-child(1) {
+  width: 35%;
+}
+
+col:nth-child(2) {
+  width: 65%;
+}
+
+@keyframes lines {
+  0% {
+    width: 0px;
+  }
+
+  25% {
+    width: 20px;
+  }
+
+  50% {
+    width: 40px;
+  }
+
+  75% {
+    width: 60px;
+  }
+
+  100% {
+    width: 80px;
+  }
+}
